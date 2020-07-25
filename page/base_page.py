@@ -8,6 +8,8 @@ class BasePage():
 
     #定位器
     locator_product_management = (By.XPATH, '//ul[@id="menu-ul"]/li[1]')
+    locator_home_page = (By.XPATH,'//div[@class="menu"]/a[1]')
+    locator_user_center = (By.XPATH,'//div[@class="header_r"]/a[1]')
 
     def __init__(self,driver):
         '''初始化'''
@@ -18,7 +20,7 @@ class BasePage():
         self.driver.get(url=front_url)
 
     def open_back_page(self):
-        '''打开前台页面'''
+        '''打开后台页面'''
         self.driver.get(url=back_url)
 
     def assert_result(self,loc):
@@ -41,3 +43,11 @@ class BasePage():
     def product_management(self):
         '''点击商品管理'''
         self.driver.find_element(*self.locator_product_management).click()
+
+    def font_home_page(self):
+        '''前台首页'''
+        self.driver.find_element(*self.locator_home_page).click()
+
+    def font_user_center(self):
+        '''前台用户中心'''
+        self.driver.find_element(*self.locator_user_center).click()
