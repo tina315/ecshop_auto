@@ -76,7 +76,7 @@ class ShoppingTestCase(BaseTestCase):
     def test_new_shopping_flow(self): #新注册的会员购物流程
         '''购物流程用例'''
         #注册
-        username = 'wanggg'
+        username = 'wangdd'
         email = username + '@126.com'
         password = '123456'
         confirm_password = password

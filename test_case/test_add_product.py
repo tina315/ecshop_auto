@@ -20,7 +20,7 @@ class AddProductTestCase(BaseTestCase):
         actual = admin.admin_login(name,password)
         self.assertIn('index', actual)
         #添加商品
-        product_name = 'strawberry_cake'
+        product_name = 'pear_cake'
         value = '533'
         price = '20'
         sdate = '2020-07-01'

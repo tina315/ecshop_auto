@@ -13,8 +13,8 @@ class UserCenterPageTestCase(BaseTestCase):
         '''添加收货地址用例'''
         file_name = DATA_PATH + r'\data_login.csv'
         data = ReadCsv().read_login_data(file_name)
-        username = data[0][0]
-        password = data[0][1]
+        username = data[-1][0]
+        password = data[-1][1]
         login = LoginPage(self.driver)
         actual = login.login(username,password)
         self.assertEqual(username, actual)

@@ -4,7 +4,7 @@ from HTMLTestRunner import HTMLTestRunner
 from data.base_data import REPORT_PATH
 
 test_dir = "test_case"
-test_report = REPORT_PATH + '-'
+test_report = REPORT_PATH + r'\report-'
 #批量执行用例
 discover = unittest.defaultTestLoader.discover(start_dir=test_dir,
                                                pattern='test*.py',

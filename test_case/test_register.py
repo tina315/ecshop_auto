@@ -8,7 +8,7 @@ class RegisterTestCase(BaseTestCase):
     '''注册用例类'''
     def test_register(self):
         '''用户注册用例'''
-        username = 'wanguu'
+        username = 'wangrr'
         email = username + '@126.com'
         password = '123456'
         confirm_password = password
