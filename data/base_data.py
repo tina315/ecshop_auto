@@ -1,8 +1,8 @@
 '''基础数据'''
 import os
 
-front_url = 'http://192.168.1.40/upload/'
-back_url = 'http://192.168.1.40/upload/admin/'
+front_url = 'http://192.168.190.1/upload/'
+back_url = 'http://192.168.190.1/upload/admin/'
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CASE_PATH = BASE_PATH + r'\case'
 DATA_PATH = BASE_PATH + r'\data'

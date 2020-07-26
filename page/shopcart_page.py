@@ -11,6 +11,7 @@ class ShopCartPage(BasePage):
     locator_go_to_pay = (By.XPATH,'//div[@class="flowBox"]/table/tbody/tr/td[2]/a/img')
     locator_clear_shopcart = (By.XPATH,'//form[@id="formCart"]/table[2]/tbody/tr/td[2]/input[1]')
     locator_update_shopcart = (By.XPATH,'//form[@id="formCart"]/table[2]/tbody/tr/td[2]/input[2]')
+    locator_select_addr = (By.XPATH,'//form[@id="theForm"]/div/table/tbody/tr[6]/td/input[1]')
 
     def back_to_shopping(self):
         '''继续购物'''
@@ -41,3 +42,7 @@ class ShopCartPage(BasePage):
         loc = (By.XPATH,xpath)
         self.driver.find_element(*loc).click()
         self.driver.switch_to.alert.accept()
+
+    def select_addr(self):
+        '''选择配送地址'''
+        self.driver.find_element(*self.locator_select_addr).click()
